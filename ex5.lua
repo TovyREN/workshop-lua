@@ -5,7 +5,9 @@ function file_exists(file)
 end
   
 function lines_from(file)
-    if not file_exists(file) then return {} end
+    if not file_exists(file) then
+        return {}
+    end
     local lines = {}
     for line in io.lines(file) do 
       lines[#lines + 1] = line
